@@ -1,0 +1,33 @@
+/* Navbar: fondo blanco con borde y sombra suave */
+.nav-bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Ícono del logo — cuadrado teal redondeado */
+.nav-logo-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #0d9488;
+  border-radius: 8px;
+}
+
+/* Link activo — teal */
+.nav-link-active   { color: #0d9488; }
+
+/* Link inactivo — gris, teal al hover */
+.nav-link-inactive { color: #6b7280; }
+.nav-link-inactive:hover { color: #0d9488; }
+
+/* Botón secundario — borde y texto teal */
+.btn-outline {
+  border: 1.5px solid #0d9488;
+  color: #0d9488;
+  background-color: transparent;
+}
+
+/* Botón primario — relleno teal */
+.btn-filled {
+  background: #0d9488;
+}

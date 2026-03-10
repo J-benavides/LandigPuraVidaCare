@@ -1,15 +1,16 @@
-<section class="relative w-full overflow-hidden hero-illustrated">
+<!-- Hero principal: fondo ilustrado con escena animada -->
+<section id="hero" class="relative w-full overflow-hidden hero-illustrated">
 
-  <!-- Background Sky Gradient -->
+  <!-- Cielo animado con degradado aurora -->
   <div class="absolute inset-0 animate-aurora-shift sky-gradient"></div>
 
-  <!-- Ground Layer -->
+  <!-- Suelo verde con corte diagonal -->
   <div class="absolute bottom-0 left-0 right-0 ground-layer"></div>
 
-  <!-- Illustrated Scene - Right Side -->
+  <!-- Escena ilustrada — lado derecho (55%) -->
   <div class="absolute right-0 top-0 bottom-0 w-[55%]">
 
-    <!-- Clouds -->
+    <!-- Nubes SVG semitransparentes -->
     <div class="absolute top-[80px] right-[200px] opacity-90">
       <svg width="120" height="60" viewBox="0 0 120 60" fill="white" fill-opacity="0.6">
         <ellipse cx="30" cy="35" rx="25" ry="20"/>
@@ -25,7 +26,7 @@
       </svg>
     </div>
 
-    <!-- Flying Birds -->
+    <!-- Pájaros animados con delays distintos -->
     <div class="absolute top-[100px] right-[300px] animate-bird-drift">
       <svg width="20" height="12" viewBox="0 0 20 12" fill="#0f172a">
         <path d="M0 6 L5 2 L10 6 L5 10 Z M10 6 L15 2 L20 6 L15 10 Z" fill-opacity="0.4"/>
@@ -42,9 +43,9 @@
       </svg>
     </div>
 
-    <!-- Background Buildings -->
+    <!-- Edificios de fondo con ventanas dinámicas -->
     <div class="absolute bottom-[28%] right-[50px] flex gap-4">
-      <!-- Building 1 -->
+      <!-- Edificio claro (frente) -->
       <div class="w-[80px] h-[140px] rounded-t-lg building-1">
         <div class="grid grid-cols-3 gap-2 p-2 mt-4">
           @for (w of windows9; track $index) {
@@ -52,7 +53,7 @@
           }
         </div>
       </div>
-      <!-- Building 2 -->
+      <!-- Edificio medio -->
       <div class="w-[100px] h-[160px] rounded-t-lg building-2">
         <div class="grid grid-cols-4 gap-2 p-2 mt-4">
           @for (w of windows12; track $index) {
@@ -60,7 +61,7 @@
           }
         </div>
       </div>
-      <!-- Building 3 -->
+      <!-- Edificio oscuro (fondo) -->
       <div class="w-[70px] h-[120px] rounded-t-lg building-3">
         <div class="grid grid-cols-2 gap-2 p-2 mt-4">
           @for (w of windows6; track $index) {
@@ -70,7 +71,7 @@
       </div>
     </div>
 
-    <!-- Trees -->
+    <!-- Árboles SVG con capas de círculos verdes -->
     <div class="absolute bottom-[28%] right-[280px]">
       <svg width="60" height="100" viewBox="0 0 60 100" fill="none">
         <rect x="24" y="60" width="12" height="40" fill="#14532d"/>
@@ -88,10 +89,10 @@
       </svg>
     </div>
 
-    <!-- Path/Road -->
+    <!-- Camino ovalado con perspectiva 3D -->
     <div class="absolute bottom-[28%] right-[100px] w-[400px] h-[80px] rounded-full road"></div>
 
-    <!-- Teal Car -->
+    <!-- Auto teal flotante -->
     <div class="absolute bottom-[32%] right-[200px] animate-float-gentle">
       <svg width="120" height="60" viewBox="0 0 120 60" fill="none">
         <rect x="10" y="30" width="100" height="25" rx="8" fill="#0d9488"/>
@@ -105,9 +106,9 @@
       </svg>
     </div>
 
-    <!-- Main Characters -->
+    <!-- Personajes principales: adulta mayor + cuidadora -->
     <div class="absolute bottom-[28%] right-[400px] flex gap-6 animate-float-gentle float-delay-1">
-      <!-- Elderly Woman -->
+      <!-- Adulta mayor (vestido rosado) -->
       <svg width="80" height="140" viewBox="0 0 80 140" fill="none">
         <ellipse cx="40" cy="90" rx="25" ry="35" fill="#e879f9"/>
         <rect x="15" y="75" width="8" height="40" rx="4" fill="#f0abfc"/>
@@ -122,7 +123,7 @@
         <ellipse cx="35" cy="138" rx="8" ry="4" fill="#1f2937"/>
         <ellipse cx="45" cy="138" rx="8" ry="4" fill="#1f2937"/>
       </svg>
-      <!-- Caregiver -->
+      <!-- Cuidadora (uniforme teal) -->
       <svg width="80" height="145" viewBox="0 0 80 145" fill="none">
         <ellipse cx="40" cy="95" rx="26" ry="38" fill="#14b8a6"/>
         <rect x="14" y="80" width="9" height="42" rx="4" fill="#0d9488"/>
@@ -139,7 +140,7 @@
       </svg>
     </div>
 
-    <!-- Small figures in distance -->
+    <!-- Figura pequeña en el fondo (perspectiva) -->
     <div class="absolute bottom-[30%] right-[550px] opacity-70">
       <svg width="40" height="60" viewBox="0 0 40 60" fill="none">
         <circle cx="20" cy="15" r="8" fill="#fbbf24"/>
@@ -151,25 +152,27 @@
 
   </div>
 
-  <!-- Hero Content - Left Side -->
+  <!-- Contenido textual — lado izquierdo -->
   <div class="absolute left-[72px] top-1/2 -translate-y-1/2 z-20 w-[42%] max-w-[600px]">
 
-    <!-- Headline -->
+    <!-- Titular principal con entrada animada -->
     <h1 class="mb-5 font-display font-black text-[76px] leading-none tracking-tight text-[#1a1a1a]">
       <div class="animate-fade-down">MÁS CUIDADO.</div>
       <div class="animate-fade-down fade-delay-1">MENOS ESTRÉS.</div>
     </h1>
 
-    <!-- Subtext -->
+    <!-- Descripción del servicio -->
     <p class="mb-8 max-w-[400px] text-[17px] leading-[1.6] text-[#374151]">
       Conectamos a adultos mayores y sus familias con cuidadores verificados.
       Transporte, acompañamiento y más — todo en un solo lugar.
     </p>
 
-    <!-- CTA Button -->
+    <!-- Botón CTA con efecto shimmer al hover -->
     <button class="group relative flex items-center gap-3 mb-6 transition-all duration-200 hover:scale-[1.03] overflow-hidden btn-cta">
+      <!-- Brillo deslizante hover -->
       <div class="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       <span class="relative z-10 text-white font-semibold text-[16px]">Encontrar mi servicio</span>
+      <!-- Ícono flecha circular -->
       <div class="relative z-10 w-7 h-7 rounded-full bg-white flex items-center justify-center">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M1 7h12M7 1l6 6-6 6" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -177,7 +180,7 @@
       </div>
     </button>
 
-    <!-- Trust Badges -->
+    <!-- Badges de confianza: verificación, rating, ubicación -->
     <div class="flex gap-4 animate-fade-up fade-delay-2">
       <div class="px-[14px] py-1.5 text-[13px] rounded-full trust-badge">
         🔒 Proveedores verificados

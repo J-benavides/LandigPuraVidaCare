@@ -1,16 +1,20 @@
+/* Contenedor principal del footer */
 .footer-bg {
   min-height: 280px;
   background-color: #0f172a;
 }
 
+/* Línea/borde sutil semitransparente */
 .footer-border {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Capa oscura encima del contenido */
 .footer-overlay {
   background-color: rgba(0, 0, 0, 0.40);
 }
 
+/* Esfera decorativa grande — lado izquierdo */
 .footer-ball-1 {
   top: 30%; left: 10%;
   width: 150px; height: 150px;
@@ -19,6 +23,7 @@
   filter: blur(55px);
 }
 
+/* Esfera decorativa mediana — lado derecho */
 .footer-ball-2 {
   top: 40%; right: 15%;
   width: 100px; height: 100px;
@@ -27,6 +32,7 @@
   filter: blur(55px);
 }
 
+/* Esfera decorativa pequeña */
 .footer-ball-3 {
   width: 80px; height: 80px;
   border-radius: 50%;
@@ -34,6 +40,7 @@
   filter: blur(55px);
 }
 
+/* Texto del logo con gradiente verde */
 .footer-logo-text {
   background: linear-gradient(135deg, #10b981 0%, #0d9488 100%);
   -webkit-background-clip: text;

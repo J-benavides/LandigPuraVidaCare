@@ -1,11 +1,11 @@
-/* Section */
+/* Sección hero principal  */
 .hero-illustrated {
   height: 820px;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-/* Sky */
+/* Cielo con gradientes radiales (sol, nubes) + degradado vertical al verde */
 .sky-gradient {
   background:
     radial-gradient(ellipse at 20% 30%, #f5a623 0%, transparent 50%),
@@ -17,7 +17,7 @@
   border-radius: 0 0 16px 16px;
 }
 
-/* Ground */
+/* Suelo verde con corte diagonal tipo perspectiva */
 .ground-layer {
   height: 35%;
   background: linear-gradient(to bottom, #166534, #15803d);
@@ -25,19 +25,19 @@
   border-radius: 0 0 16px 16px;
 }
 
-/* Buildings */
-.building-1 { background-color: #e5e7eb; border: 2px solid #d1d5db; }
-.building-2 { background-color: #d1d5db; border: 2px solid #9ca3af; }
-.building-3 { background-color: #9ca3af; border: 2px solid #6b7280; }
+/* Edificios: 3 tonos grises simulando profundidad */
+.building-1 { background-color: #e5e7eb; border: 2px solid #d1d5db; } 
+.building-2 { background-color: #d1d5db; border: 2px solid #9ca3af; } 
+.building-3 { background-color: #9ca3af; border: 2px solid #6b7280; } 
 
-/* Road */
+/* Camino con perspectiva 3D simulada */
 .road {
   background-color: #9ca3af;
   transform: perspective(300px) rotateX(45deg);
   opacity: 0.5;
 }
 
-/* CTA Button */
+/* Botón naranja con sombra de color */
 .btn-cta {
   padding: 14px 28px;
   background-color: #f97316;
@@ -45,20 +45,23 @@
   box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
 }
 
-/* Trust Badges */
+/* Badge de confianza */
 .trust-badge {
   color: #1a1a1a;
   background-color: rgba(255, 255, 255, 0.80);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Animations */
+/* ── Animaciones ─────────────────────────────── */
+
+/* Cielo en movimiento continuo  */
 @keyframes aurora-shift {
   0%, 100% { background-position: 0% 0%; }
   50%       { background-position: 100% 100%; }
 }
 .animate-aurora-shift { animation: aurora-shift 20s ease infinite; }
 
+/* Flotado suave vertical */
 @keyframes float-gentle {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-8px); }
@@ -66,6 +69,7 @@
 .animate-float-gentle { animation: float-gentle 4s ease-in-out infinite alternate; }
 .float-delay-1        { animation-delay: 0.5s; }
 
+/* Pajaros deslizándose horizontalmente  */
 @keyframes bird-drift {
   0%   { transform: translateX(0); }
   100% { transform: translateX(50px); }
@@ -74,6 +78,7 @@
 .bird-delay-1       { animation-delay: 1s; }
 .bird-delay-2       { animation-delay: 2s; }
 
+/* Entrada desde arriba con fade */
 @keyframes fade-down {
   from { opacity: 0; transform: translateY(-20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -81,6 +86,7 @@
 .animate-fade-down { animation: fade-down 0.8s ease-out forwards; }
 .fade-delay-1      { animation-delay: 0.3s; }
 
+/* Entrada desde abajo con fade */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
