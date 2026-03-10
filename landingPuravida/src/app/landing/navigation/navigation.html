@@ -1,0 +1,49 @@
+<!-- Navbar fija en top, z-index alto, transición suave al hacer scroll -->
+<nav class="fixed top-0 left-0 right-0 z-50 h-18 px-[5%] flex items-center justify-between transition-all duration-300 nav-bar">
+
+  <!-- Logo: ícono SVG + nombre de marca -->
+  <div class="flex items-center gap-3">
+    <div class="flex items-center justify-center nav-logo-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.71-2C8.49 17.81 10 13 13 8c2.42 0 3.5 4.5 4.5 8.5.5 2 1 4 2.5 5.5l1.42-1.42C19.5 18.67 19 16.5 18.5 14.5 18 12.5 17 8 17 8zM12 8c-1-2-3-3-5.5-3L5 6.5C7 7.5 8.5 9 10 11.5 11 13.5 12 16 13 19l1.42-1.42C13.42 15.58 12.5 11 12 8z" fill="#ffffff"/>
+      </svg>
+    </div>
+    <span class="font-bold text-[20px] font-display text-[#1a1a1a]">PuraVidaCare</span>
+  </div>
+
+  <!-- Links de navegación — ocultos en mobile -->
+  <div class="hidden md:flex items-center gap-8">
+    @for (link of navLinks; track link) {
+      <button
+        (click)="setActive(link)"
+        class="relative text-[14px] transition-colors duration-200 group nav-link"
+        [class.nav-link-active]="activeLink === link"
+        [class.nav-link-inactive]="activeLink !== link">
+        {{ link }}
+        <!-- Subrayado activo (ancho completo) -->
+        <div class="absolute -bottom-2 left-0 h-[2px] bg-[#0d9488] transition-all duration-300"
+          [class.w-full]="activeLink === link"
+          [class.w-0]="activeLink !== link">
+        </div>
+        <!-- Subrayado hover (se oculta si ya está activo) -->
+        <div class="absolute -bottom-2 left-0 h-[2px] bg-[#0d9488] w-0 group-hover:w-full transition-all duration-300"
+          [class.opacity-0]="activeLink === link"
+          [class.opacity-100]="activeLink !== link">
+        </div>
+      </button>
+    }
+  </div>
+
+  <!-- Botones login outline + registro con shimmer -->
+  <div class="flex items-center gap-3">
+    <button class="text-[14px] font-semibold px-5 py-2 transition-all duration-200 hover:bg-[#0d9488]/5 rounded-full btn-outline">
+      Ingresar
+    </button>
+    <button class="relative text-white text-[14px] font-semibold px-6 py-2.5 rounded-full transition-transform duration-200 hover:scale-[1.02] overflow-hidden group btn-filled">
+      <!-- Efecto shimmer al hover -->
+      <div class="absolute inset-0 bg-linear-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+      <span class="relative z-10">Comenzar</span>
+    </button>
+  </div>
+
+</nav>
