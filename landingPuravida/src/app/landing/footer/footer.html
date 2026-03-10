@@ -1,0 +1,55 @@
+<footer class="relative w-full overflow-hidden footer-bg">
+
+  <!-- Top Border -->
+  <div class="absolute top-0 left-0 right-0 h-px footer-border"></div>
+
+  <!-- Wave Pattern -->
+  <div class="absolute top-0 left-0 right-0">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+      class="w-full h-[60px]" preserveAspectRatio="none">
+      <path d="M0,0 L0,30 C360,50 720,10 1080,30 C1200,40 1320,20 1440,30 L1440,0 Z"
+        fill="rgba(13, 148, 136, 0.08)"/>
+    </svg>
+  </div>
+
+  <!-- Base Fill Overlay -->
+  <div class="absolute inset-0 footer-overlay"></div>
+
+  <!-- Tetris Columns -->
+  <div class="absolute inset-0 flex justify-evenly items-end opacity-[0.10]">
+    @for (col of columns; track $index) {
+      <div class="w-[12.5%]"
+        [style.height.%]="col.height"
+        [style.background]="col.gradient">
+      </div>
+    }
+  </div>
+
+  <!-- Floating Balls -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute footer-ball-1"></div>
+    <div class="absolute footer-ball-2"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 footer-ball-3"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 min-h-[280px] flex flex-col items-center justify-center text-center px-8">
+
+    <!-- Logo -->
+    <h3 class="mb-4 text-[28px] font-display font-bold footer-logo-text">
+      PuraVidaCare
+    </h3>
+
+    <!-- Text Line 1 -->
+    <p class="text-[14px] mb-2 text-white/45">
+      Marketplace diseñado con ❤️ para adultos mayores y sus familias • Costa Rica
+    </p>
+
+    <!-- Text Line 2 -->
+    <p class="text-[14px] text-white/45">
+      © 2025 PuraVidaCare — Proyecto Académico
+    </p>
+
+  </div>
+
+</footer>
